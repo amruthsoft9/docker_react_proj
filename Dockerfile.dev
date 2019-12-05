@@ -1,6 +1,6 @@
-FROM amruthsoft9/front-end:latest
+FROM node:alpine
 WORKDIR '/app'
-RUN npm config set registry http://registry.npmjs.org/
+#RUN npm config set registry http://registry.npmjs.org/
 COPY package.json .
 RUN npm install
 COPY . .
