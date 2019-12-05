@@ -1,0 +1,7 @@
+FROM amruthsoft9/front-end:latest
+WORKDIR '/app'
+RUN npm config set registry http://registry.npmjs.org/
+COPY package.json .
+RUN npm install
+COPY . .
+CMD ["npm","run","start"]
